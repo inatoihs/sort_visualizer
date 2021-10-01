@@ -223,12 +223,10 @@ class _MyHomePageState extends State<MyHomePage> {
           _numbers[j] = _numbers[i];
           _numbers[i] = temp;
         }
-        print("$i ${_numbers.length}");
-
-        await Future.delayed(_getDuration(), () {});
 
         _streamController.add(_numbers);
       }
+      await Future.delayed(_getDuration(), () {});
     }
   }
 
